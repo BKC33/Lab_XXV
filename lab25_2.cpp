@@ -9,7 +9,7 @@ void printList(list<string> s){
 	for( i = s.begin(); i != s.end(); i++){
 		cout << *i << " ";
 	}		
-	cout << "\n";	
+	cout << "\n";	 
 }
 
 int main(){
@@ -23,9 +23,30 @@ int main(){
 	loc = find(line_up.begin(),line_up.end(),"Bob");
 	line_up.insert(loc,"Oscar");
 	
-	//Write your code here
+	line_up.push_back("Luffy");
+	line_up.push_back("Sanji");
+	line_up.push_back("Nami");
+
+	line_up.pop_front();
+	line_up.pop_front();
+
+	loc = find(line_up.begin(),line_up.end(),"Sanji");
+	line_up.insert(loc,"Narutu");
+
+	loc = find(line_up.begin(),line_up.end(),"Bob");
+	line_up.insert(loc,"Prayath");
+
+
+	loc = find(line_up.begin(),line_up.end(),"Bob");
+	line_up.insert(loc,"Tony");
+
+	line_up.erase(loc);
 	
+    line_up.pop_front();
+	line_up.pop_front();
+	line_up.pop_front();
+
 	printList(line_up);
-		
+	
 	return 0;
 }
